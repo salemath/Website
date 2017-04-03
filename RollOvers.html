@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Roll Overs</title>
+	<style type="text/css">
+		#L1,#L2{color:#FF6600;font-weight:bold;
+				font-size:13px;font-family:verdana;}
+	</style>
+	<script language="javascript">
+		function changeIt(ciBullet,ciLink){
+			document.getElementById(ciBullet).src="sunBullet2.gif";
+			document.getElementById(ciLink).style.textDecoration="underline";
+			document.getElementById(ciLink).innerHTML="Hello!";
+		}
+		function changeBack(cbBullet,cbLink,cbText){
+			document.getElementById(cbBullet).src="sunBullet.gif";
+			document.getElementById(cbLink).style.textDecoration="none";
+			document.getElementById(cbLink).innerHTML="Link " + cbText;
+		
+		}
+	</script>
+</head>
+<body>
+	<h1 align ="center">Menu Rollovers</h1>
+	</br>
+	</br>
+	<img src="sunBullet.gif" align="absmiddle" id="bullet1"/>
+	<a href="#" id="L1" onmouseover="changeIt('bullet1',this.id)"
+					onmouseout="changeBack('bullet1',this.id,'One')"> Link One </a>
+	</br>
+	<img src="sunBullet.gif" align="absmiddle" id="bullet2"/>
+	<a href="#" id="L2" onmouseover="changeIt('bullet2',this.id)"
+					  onmouseout="changeBack('bullet2',this.id,'Two')">
+	Link Two</a>
+
+</body>
+</html>
